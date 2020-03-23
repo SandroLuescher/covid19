@@ -9,7 +9,7 @@ COVID19_Fallzahlen_Kanton_TI_total.csv <- subset(COVID19_Fallzahlen_Kanton_TI_to
 COVID19_Fallzahlen_Kanton_ZH_total.csv <- subset(COVID19_Fallzahlen_Kanton_ZH_total.csv, select = -c(12,13))
 COVID19_Fallzahlen_Kanton_GE_total.csv <- subset(COVID19_Fallzahlen_Kanton_GE_total.csv, select = -c(12,13))
 
-# Merge the datasets
+# Merge the datasets (had drop OW because it contains too little data - caused an error)
 
 new <- rbind(COVID19_Fallzahlen_Kanton_AG_total.csv, COVID19_Fallzahlen_Kanton_AI_total.csv,
              COVID19_Fallzahlen_Kanton_AR_total.csv, COVID19_Fallzahlen_Kanton_BE_total.csv,
