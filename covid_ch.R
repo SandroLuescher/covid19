@@ -1,9 +1,11 @@
 # Choose the data directory with the csv files
 
+# The following code chunk loads all the files in the respective folder
+
 temp = list.files(pattern="*.csv")
 for (i in 1:length(temp)) assign(temp[i], read.csv(temp[i]))
 
-# Delete the columns so all files have the same number of columns
+# Delete specific columns so all files have the same number of columns
 
 COVID19_Fallzahlen_Kanton_TI_total.csv <- subset(COVID19_Fallzahlen_Kanton_TI_total.csv, select = -c(12))
 COVID19_Fallzahlen_Kanton_ZH_total.csv <- subset(COVID19_Fallzahlen_Kanton_ZH_total.csv, select = -c(12,13))
