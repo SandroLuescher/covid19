@@ -1,6 +1,6 @@
 # Choose the data directory with the csv files
 
-# The following code chunk loads all the files in the respective folder
+# The following code chunk loads all the files from the respective folder
 
 temp = list.files(pattern="*.csv")
 for (i in 1:length(temp)) assign(temp[i], read.csv(temp[i]))
